@@ -1,0 +1,72 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "profilePic": "https://randomuser.me/api/portraits/men/1.jpg",
+      "image": "https://picsum.photos/id/237/600/400",
+      "caption": "Beautiful day at the park 🌳☀️",
+      "likes": 128,
+      "comments": [
+        { "id": 1, "username": "alice", "text": "Wow, looks amazing!" },
+        { "id": 2, "username": "mike", "text": "Wish I was there 😍" }
+      ],
+      "timestamp": "2025-09-10T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "username": "sarah_lee",
+      "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
+      "image": "https://picsum.photos/id/238/600/400",
+      "caption": "Coffee + Coding = ❤️ #developerLife",
+      "likes": 342,
+      "comments": [
+        { "id": 1, "username": "john_doe", "text": "Exactly! 🔥" },
+        { "id": 2, "username": "emma", "text": "Best combo ever 😋" }
+      ],
+      "timestamp": "2025-09-09T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "username": "travel_guy",
+      "profilePic": "https://randomuser.me/api/portraits/men/3.jpg",
+      "image": "https://picsum.photos/id/239/600/400",
+      "caption": "Exploring the mountains 🏔️",
+      "likes": 521,
+      "comments": [
+        { "id": 1, "username": "sarah_lee", "text": "So cool! 😍" },
+        { "id": 2, "username": "mike", "text": "Adding this to my bucket list!" }
+      ],
+      "timestamp": "2025-09-08T15:45:00Z"
+    }
+  ],
+
+  "profile": {
+    "id": 101,
+    "username": "vinoth_kumar",
+    "profilePic": "https://randomuser.me/api/portraits/men/10.jpg"
+  },
+
+  "suggestions": [
+    {
+      "id": 201,
+      "username": "emma_watson",
+      "profilePic": "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+      "id": 202,
+      "username": "mike_tyson",
+      "profilePic": "https://randomuser.me/api/portraits/men/6.jpg"
+    },
+    {
+      "id": 203,
+      "username": "lisa_rose",
+      "profilePic": "https://randomuser.me/api/portraits/women/7.jpg"
+    },
+    {
+      "id": 204,
+      "username": "alex_coder",
+      "profilePic": "https://randomuser.me/api/portraits/men/8.jpg"
+    }
+  ]
+}
