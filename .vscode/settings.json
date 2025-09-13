@@ -1,26 +1,14 @@
 {
-  // ===================== EDITOR =====================
   "editor.fontFamily": "'Courier New', monospace",
   "editor.fontSize": 17,
   "editor.fontWeight": "normal",
-
   "editor.autoIndent": "full",
   "editor.formatOnSave": true,
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
   "editor.minimap.enabled": false,
-
-  // ===================== FORMATTER (Prettier) =====================
-  "prettier.semi": true,
-  "prettier.singleQuote": true,
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-
-  // ===================== AUTO SAVE =====================
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-
-  // ===================== TERMINAL =====================
   "terminal.integrated.fontFamily": "'Courier New', monospace",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.cursorBlinking": true,
@@ -32,7 +20,14 @@
   // ===================== EMMET =====================
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
+    "javascriptreact": "html",
+    "typescript": "typescriptreact",
+    "typescriptreact": "html"
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+
+  // ===================== TAG AUTO-CLOSE =====================
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined"
 }
