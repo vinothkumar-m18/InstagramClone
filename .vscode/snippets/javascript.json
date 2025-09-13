@@ -1,0 +1,22 @@
+{
+  "Div Tag": {
+    "prefix": "div",
+    "body": ["<div>$0</div>"],
+    "description": "Insert a <div></div>"
+  },
+  "Span Tag": {
+    "prefix": "span",
+    "body": ["<span>$0</span>"],
+    "description": "Insert a <span></span>"
+  },
+  "React Fragment": {
+    "prefix": "frag",
+    "body": ["<>$0</>"],
+    "description": "Insert a React Fragment"
+  },
+  "Paragraph": {
+    "prefix": "p",
+    "body": ["<p>$0</p>"],
+    "description": "Insert a <p></p>"
+  }
+}
