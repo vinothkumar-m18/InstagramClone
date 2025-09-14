@@ -7,7 +7,7 @@ function Feed(){
             <div className = "stories">
                 <Stories/>
             </div>
-            <div className = "posts">
+            <div className = "post-container">
                 <Posts/>
             </div>
         </>

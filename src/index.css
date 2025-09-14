@@ -36,3 +36,40 @@
     height: 70px;
     margin: 30px auto;
 }
+.dp{
+    height: 35px;
+}
+.post-header{
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.post-header div{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.post-list{
+    width: 70%;
+    margin: auto;
+}
+.post-image img{
+    width: 475px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+.post-icon-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+.post-icon-list .bi-heart{
+    position: relative;
+    top: 2px;
+}
+  
+.post-icon-list div{
+    display: flex;
+    column-gap: 18px;
+}
