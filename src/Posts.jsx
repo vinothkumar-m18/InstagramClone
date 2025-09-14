@@ -12,7 +12,7 @@ function Posts() {
         <>
             {posts.length > 0 ? (
                 posts.map(post => (
-                    <div className="post-list">
+                    <div className="post">
                         <div className="post-header">
                             <div>
                                 <img className="dp rounded-circle" src={post.profilePic} alt="" />
@@ -33,8 +33,10 @@ function Posts() {
                                 <i className="bi bi-bookmark fs-4"></i>
                             </div>
                             <h6>{post.likes} likes</h6>
-                            <h6>{post.username}</h6>
-                            <p>{post.caption}</p>
+                            <p>
+                                <strong>{post.username}</strong> {post.caption}
+                            </p>
+                           
                         </div>
 
 
