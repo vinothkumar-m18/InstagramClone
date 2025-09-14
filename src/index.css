@@ -1,0 +1,38 @@
+.home{
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+}
+.feed{
+    width: 50%;
+}
+.suggestions{
+    width: 30%;
+}
+.instagram-text{
+    width: 120px;
+    margin: 30px;
+}
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 30px;
+    align-items: flex-start;
+}
+.sidebar-items div{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    align-items: center;
+}
+.sidebar-items p{
+    margin: 0;
+}
+.stories{
+    width: 80%;
+    background-color: blue;
+    height: 70px;
+    margin: 30px auto;
+}
