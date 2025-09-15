@@ -14,20 +14,18 @@ function Suggestions() {
             catch(error => console.log(error))
     }, [])
     return (
-        <>  {(profile && suggestions.length > 0) ? (
-            <div className = "my-profile-suggestions">
-                <div>
-                    <img className = "dp-suggestions rounded-circle" src={profile.profilePic} alt="" />
-                    <h5>{profile.username}</h5>
+        <>
+            {profile ? (
+                <div className = "suggestions-my-profile">
+                    <div>
+                        <img className = "rounded-circle" src={profile.profilePic} alt=""/>
+                        <h6>{profile.username}</h6>
+                    </div>
+                    <small >Switch</small>
                 </div>
-                <small className = ".text-primary">Switch</small>
-            </div>
-        ) : (
-            <div>
-                <p>Loading suggestions</p>
-            </div>
-        )}
-
+            ) : (
+                <p>Loading my profile</p>
+            )}       
         </>
 
     );

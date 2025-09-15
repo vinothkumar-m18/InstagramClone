@@ -80,15 +80,30 @@
     margin-bottom: 20px;
 }
 .dp-suggestions{
-    height: 45px;
+    height: 42px;
 }
-.my-profile-suggestions{
+.suggestions-my-profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+    margin-top: 30px;
 }
-.my-profile-suggestions div{
+.suggestions-my-profile img{
+    height: 45px;
+}
+.suggestions-my-profile div{
     display: flex;
-    column-gap: 12px;
     align-items: center;
+    column-gap: 12px;
+}
+.suggestions-my-profile small{
+    color: blue;
+    position: relative;
+    top: 2px;
+}
+.suggestions-my-profile h6{
+    margin: 0;
 }

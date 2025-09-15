@@ -2,7 +2,8 @@
   "posts": [
     {
       "id": 1,
-      "username": "john_doe",
+      "userId": "john_doe",
+      "username": "John Doe",
       "profilePic": "https://randomuser.me/api/portraits/men/1.jpg",
       "image": "https://picsum.photos/id/237/600/400",
       "caption": "Beautiful day at the park 🌳☀️",
@@ -15,7 +16,8 @@
     },
     {
       "id": 2,
-      "username": "sarah_lee",
+      "userId": "sarah_lee",
+      "username": "Sarah Lee",
       "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
       "image": "https://picsum.photos/id/238/600/400",
       "caption": "Coffee + Coding = ❤️ #developerLife",
@@ -28,7 +30,8 @@
     },
     {
       "id": 3,
-      "username": "travel_guy",
+      "userId": "travel_guy",
+      "username": "Travel Guy",
       "profilePic": "https://randomuser.me/api/portraits/men/3.jpg",
       "image": "https://picsum.photos/id/239/600/400",
       "caption": "Exploring the mountains 🏔️",
@@ -38,34 +41,126 @@
         { "id": 2, "username": "mike", "text": "Adding this to my bucket list!" }
       ],
       "timestamp": "2025-09-08T15:45:00Z"
+    },
+    {
+      "id": 4,
+      "userId": "emma_watson",
+      "username": "Emma Watson",
+      "profilePic": "https://randomuser.me/api/portraits/women/5.jpg",
+      "image": "https://picsum.photos/id/240/600/400",
+      "caption": "Chilling with some good books 📚☕",
+      "likes": 278,
+      "comments": [
+        { "id": 1, "username": "john_doe", "text": "Perfect vibe 👌" }
+      ],
+      "timestamp": "2025-09-07T11:20:00Z"
+    },
+    {
+      "id": 5,
+      "userId": "mike_tyson",
+      "username": "Mike Tyson",
+      "profilePic": "https://randomuser.me/api/portraits/men/6.jpg",
+      "image": "https://picsum.photos/id/241/600/400",
+      "caption": "Training hard 🥊💪",
+      "likes": 815,
+      "comments": [
+        { "id": 1, "username": "travel_guy", "text": "Beast mode 🔥🔥" }
+      ],
+      "timestamp": "2025-09-06T18:40:00Z"
+    },
+    {
+      "id": 6,
+      "userId": "lisa_rose",
+      "username": "Lisa Rose",
+      "profilePic": "https://randomuser.me/api/portraits/women/7.jpg",
+      "image": "https://picsum.photos/id/242/600/400",
+      "caption": "Beach days are the best 🏖️",
+      "likes": 401,
+      "comments": [
+        { "id": 1, "username": "emma", "text": "Take me with you 😍" }
+      ],
+      "timestamp": "2025-09-05T14:05:00Z"
+    },
+    {
+      "id": 7,
+      "userId": "alex_coder",
+      "username": "Alex Coder",
+      "profilePic": "https://randomuser.me/api/portraits/men/8.jpg",
+      "image": "https://picsum.photos/id/243/600/400",
+      "caption": "Late night debugging 💻🌙",
+      "likes": 155,
+      "comments": [
+        { "id": 1, "username": "sarah_lee", "text": "Story of my life 😂" }
+      ],
+      "timestamp": "2025-09-04T23:10:00Z"
+    },
+    {
+      "id": 8,
+      "userId": "alice_wonder",
+      "username": "Alice Wonder",
+      "profilePic": "https://randomuser.me/api/portraits/women/9.jpg",
+      "image": "https://picsum.photos/id/244/600/400",
+      "caption": "Sunset skies 🌅",
+      "likes": 620,
+      "comments": [
+        { "id": 1, "username": "mike_tyson", "text": "Epic view 😎" }
+      ],
+      "timestamp": "2025-09-03T19:25:00Z"
+    },
+    {
+      "id": 9,
+      "userId": "coder_raj",
+      "username": "Coder Raj",
+      "profilePic": "https://randomuser.me/api/portraits/men/11.jpg",
+      "image": "https://picsum.photos/id/245/600/400",
+      "caption": "Hackathon grind 🔥👨‍💻",
+      "likes": 210,
+      "comments": [
+        { "id": 1, "username": "alex_coder", "text": "Keep going 🚀" }
+      ],
+      "timestamp": "2025-09-02T08:15:00Z"
+    },
+    {
+      "id": 10,
+      "userId": "nature_lover",
+      "username": "Nature Lover",
+      "profilePic": "https://randomuser.me/api/portraits/women/12.jpg",
+      "image": "https://picsum.photos/id/246/600/400",
+      "caption": "Camping under the stars ✨",
+      "likes": 734,
+      "comments": [
+        { "id": 1, "username": "travel_guy", "text": "Dream trip 😍" }
+      ],
+      "timestamp": "2025-09-01T22:50:00Z"
     }
   ],
 
   "profile": {
     "id": 101,
-    "username": "vinoth_kumar",
+    "userId": "vinoth_kumar",
+    "username": "Vinoth Kumar",
     "profilePic": "https://randomuser.me/api/portraits/men/10.jpg"
   },
 
   "suggestions": [
     {
       "id": 201,
-      "username": "emma_watson",
+      "userId": "emma_watson",
       "profilePic": "https://randomuser.me/api/portraits/women/5.jpg"
     },
     {
       "id": 202,
-      "username": "mike_tyson",
+      "userId": "mike_tyson",
       "profilePic": "https://randomuser.me/api/portraits/men/6.jpg"
     },
     {
       "id": 203,
-      "username": "lisa_rose",
+      "userId": "lisa_rose",
       "profilePic": "https://randomuser.me/api/portraits/women/7.jpg"
     },
     {
       "id": 204,
-      "username": "alex_coder",
+      "userId": "alex_coder",
       "profilePic": "https://randomuser.me/api/portraits/men/8.jpg"
     }
   ]
