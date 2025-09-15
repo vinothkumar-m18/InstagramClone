@@ -20,8 +20,8 @@ function Suggestions() {
                     <div>
                         <img className = "rounded-circle" src={profile.profilePic} alt=""/>
                         <div className = "suggestions-my-profile-n1">
-                            <h6>{profile.userId}</h6>
-                            <p>{profile.username}</p>
+                            <p className = "suggestions-my-userid">{profile.userId}</p>
+                            <p className = "suggestions-my-username">{profile.username}</p>
                         </div>
                     </div>
                     <small >Switch</small>
@@ -29,6 +29,28 @@ function Suggestions() {
             ) : (
                 <p>Loading my profile</p>
             )}       
+            <div className = "suggestions-div2">
+                <p>Suggested for you</p>
+                <small>See All</small>
+            </div>
+            {suggestions.length > 0 ? (
+                suggestions.map(suggestion => (
+                    <div className = "suggestions-my-profile">
+                        <div>
+                            <img className="rounded-circle" src={suggestion.profilePic} alt="" />
+                            <div className="suggestions-my-profile-n1">
+                                <p className="suggestions-my-userid">{suggestion.userId}</p>
+                                <p className="suggestions-my-username">Popular</p>
+                            </div>
+                        </div>
+                        <small >Follow</small>
+                    </div>
+                ))
+            ) : (
+                <div>
+                    <p>Loading suggestions</p>
+                </div>
+            )}
         </>
 
     );

@@ -93,6 +93,9 @@
 }
 .suggestions-my-profile img{
     height: 43px;
+    margin: auto 0;
+    position: relative;
+    top: 2px;
 }
 .suggestions-my-profile div{
     display: flex;
@@ -116,9 +119,36 @@
     display: flex;
     flex-direction: column;
     position: relative;    
-    top: 8px;
+    top: 1px;
+    width: 100%;
+    align-items: flex-start;
 }
-.suggestions-my-profile-n1 p{
+.suggestions-my-userid{
+    font-weight: 600;
     font-size: 14px;
-    text-align:start;
+    margin: 0;
+}
+.suggestions-my-username{
+    font-size: 13px;
+    margin: 0;
+    position: relative;
+    right: 3px;
+    color: #8e8e8e;
+}   
+.suggestions-div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.suggestions-div2 p{
+    margin: 0;
+    font-weight: 550;
+    color: #8e8e8e;
+    font-size: 15px;
 }
