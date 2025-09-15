@@ -107,3 +107,8 @@
 .suggestions-my-profile h6{
     margin: 0;
 }
+.post-footer-username{
+    font-weight: 649;
+    font-size:15px;
+    margin-right: 3px;
+}

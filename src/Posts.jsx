@@ -34,7 +34,7 @@ function Posts() {
                             </div>
                             <h6>{post.likes} likes</h6>
                             <p>
-                                <strong>{post.username}</strong> {post.caption}
+                                <span className = "post-footer-username">{post.username.toLowerCase()}</span> {post.caption}
                             </p>
                            
                         </div>
