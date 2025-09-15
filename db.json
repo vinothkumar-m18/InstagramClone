@@ -5,12 +5,12 @@
       "userId": "john_doe",
       "username": "John Doe",
       "profilePic": "https://randomuser.me/api/portraits/men/1.jpg",
-      "image": "https://picsum.photos/id/237/600/400",
-      "caption": "Beautiful day at the park 🌳☀️",
+      "image": "https://picsum.photos/id/1015/600/400",
+      "caption": "Morning jog to clear the mind 🏃‍♂️🌅",
       "likes": 128,
       "comments": [
-        { "id": 1, "username": "alice", "text": "Wow, looks amazing!" },
-        { "id": 2, "username": "mike", "text": "Wish I was there 😍" }
+        { "id": 1, "username": "alice", "text": "Great start to the day!" },
+        { "id": 2, "username": "mike", "text": "I should join you next time 😅" }
       ],
       "timestamp": "2025-09-10T12:00:00Z"
     },
@@ -19,12 +19,12 @@
       "userId": "sarah_lee",
       "username": "Sarah Lee",
       "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
-      "image": "https://picsum.photos/id/238/600/400",
-      "caption": "Coffee + Coding = ❤️ #developerLife",
+      "image": "https://picsum.photos/id/1027/600/400",
+      "caption": "Cappuccino vibes ☕✨",
       "likes": 342,
       "comments": [
-        { "id": 1, "username": "john_doe", "text": "Exactly! 🔥" },
-        { "id": 2, "username": "emma", "text": "Best combo ever 😋" }
+        { "id": 1, "username": "john_doe", "text": "Looks delicious 🔥" },
+        { "id": 2, "username": "emma", "text": "Perfect mood 😋" }
       ],
       "timestamp": "2025-09-09T09:30:00Z"
     },
@@ -33,11 +33,11 @@
       "userId": "travel_guy",
       "username": "Travel Guy",
       "profilePic": "https://randomuser.me/api/portraits/men/3.jpg",
-      "image": "https://picsum.photos/id/239/600/400",
-      "caption": "Exploring the mountains 🏔️",
+      "image": "https://picsum.photos/id/1003/600/400",
+      "caption": "Exploring mountain trails 🏔️",
       "likes": 521,
       "comments": [
-        { "id": 1, "username": "sarah_lee", "text": "So cool! 😍" },
+        { "id": 1, "username": "sarah_lee", "text": "So peaceful! 😍" },
         { "id": 2, "username": "mike", "text": "Adding this to my bucket list!" }
       ],
       "timestamp": "2025-09-08T15:45:00Z"
@@ -47,8 +47,8 @@
       "userId": "emma_watson",
       "username": "Emma Watson",
       "profilePic": "https://randomuser.me/api/portraits/women/5.jpg",
-      "image": "https://picsum.photos/id/240/600/400",
-      "caption": "Chilling with some good books 📚☕",
+      "image": "https://picsum.photos/id/1025/600/400",
+      "caption": "Cozy evening with a good book 📚",
       "likes": 278,
       "comments": [
         { "id": 1, "username": "john_doe", "text": "Perfect vibe 👌" }
@@ -60,11 +60,11 @@
       "userId": "mike_tyson",
       "username": "Mike Tyson",
       "profilePic": "https://randomuser.me/api/portraits/men/6.jpg",
-      "image": "https://picsum.photos/id/241/600/400",
-      "caption": "Training hard 🥊💪",
+      "image": "https://picsum.photos/id/1021/600/400",
+      "caption": "Back to training 🥊💪",
       "likes": 815,
       "comments": [
-        { "id": 1, "username": "travel_guy", "text": "Beast mode 🔥🔥" }
+        { "id": 1, "username": "travel_guy", "text": "Absolute beast 🔥🔥" }
       ],
       "timestamp": "2025-09-06T18:40:00Z"
     },
@@ -73,11 +73,11 @@
       "userId": "lisa_rose",
       "username": "Lisa Rose",
       "profilePic": "https://randomuser.me/api/portraits/women/7.jpg",
-      "image": "https://picsum.photos/id/242/600/400",
-      "caption": "Beach days are the best 🏖️",
+      "image": "https://picsum.photos/id/1011/600/400",
+      "caption": "Beach days hit different 🏖️🌊",
       "likes": 401,
       "comments": [
-        { "id": 1, "username": "emma", "text": "Take me with you 😍" }
+        { "id": 1, "username": "emma", "text": "Invite me next time 😍" }
       ],
       "timestamp": "2025-09-05T14:05:00Z"
     },
@@ -86,11 +86,11 @@
       "userId": "alex_coder",
       "username": "Alex Coder",
       "profilePic": "https://randomuser.me/api/portraits/men/8.jpg",
-      "image": "https://picsum.photos/id/243/600/400",
-      "caption": "Late night debugging 💻🌙",
+      "image": "https://picsum.photos/id/1005/600/400",
+      "caption": "When the bug finally gets fixed 💻✨",
       "likes": 155,
       "comments": [
-        { "id": 1, "username": "sarah_lee", "text": "Story of my life 😂" }
+        { "id": 1, "username": "sarah_lee", "text": "That feeling! 😂" }
       ],
       "timestamp": "2025-09-04T23:10:00Z"
     },
@@ -99,8 +99,8 @@
       "userId": "alice_wonder",
       "username": "Alice Wonder",
       "profilePic": "https://randomuser.me/api/portraits/women/9.jpg",
-      "image": "https://picsum.photos/id/244/600/400",
-      "caption": "Sunset skies 🌅",
+      "image": "https://picsum.photos/id/1035/600/400",
+      "caption": "Golden hour magic 🌅",
       "likes": 620,
       "comments": [
         { "id": 1, "username": "mike_tyson", "text": "Epic view 😎" }
@@ -113,10 +113,10 @@
       "username": "Coder Raj",
       "profilePic": "https://randomuser.me/api/portraits/men/11.jpg",
       "image": "https://picsum.photos/id/1062/600/400",
-      "caption": "Hackathon grind 🔥👨‍💻",
+      "caption": "Pulling an all-nighter for the hackathon 👨‍💻🔥",
       "likes": 210,
       "comments": [
-        { "id": 1, "username": "alex_coder", "text": "Keep going 🚀" }
+        { "id": 1, "username": "alex_coder", "text": "Respect bro 🚀" }
       ],
       "timestamp": "2025-09-02T08:15:00Z"
     },
@@ -126,7 +126,7 @@
       "username": "Nature Lover",
       "profilePic": "https://randomuser.me/api/portraits/women/12.jpg",
       "image": "https://picsum.photos/id/1056/600/400",
-      "caption": "Camping under the stars ✨",
+      "caption": "Camping under the stars ✨🌌",
       "likes": 734,
       "comments": [
         { "id": 1, "username": "travel_guy", "text": "Dream trip 😍" }
