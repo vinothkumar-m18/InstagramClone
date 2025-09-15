@@ -19,7 +19,10 @@ function Suggestions() {
                 <div className = "suggestions-my-profile">
                     <div>
                         <img className = "rounded-circle" src={profile.profilePic} alt=""/>
-                        <h6>{profile.username}</h6>
+                        <div className = "suggestions-my-profile-n1">
+                            <h6>{profile.userId}</h6>
+                            <p>{profile.username}</p>
+                        </div>
                     </div>
                     <small >Switch</small>
                 </div>

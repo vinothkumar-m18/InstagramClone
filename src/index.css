@@ -89,10 +89,10 @@
     width: 70%;
     margin: auto;
     margin-top: 40px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .suggestions-my-profile img{
-    height: 45px;
+    height: 43px;
 }
 .suggestions-my-profile div{
     display: flex;
@@ -111,4 +111,14 @@
     font-weight: 649;
     font-size:15px;
     margin-right: 3px;
+}
+.suggestions-my-profile-n1{
+    display: flex;
+    flex-direction: column;
+    position: relative;    
+    top: 8px;
+}
+.suggestions-my-profile-n1 p{
+    font-size: 14px;
+    text-align:start;
 }
