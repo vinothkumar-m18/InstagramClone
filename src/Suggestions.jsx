@@ -17,9 +17,9 @@ function Suggestions() {
         <>
             {profile ? (
                 <div className = "suggestions-my-profile">
-                    <div>
+                    <div className = "suggestions-my-profile-n1">
                         <img className = "rounded-circle" src={profile.profilePic} alt=""/>
-                        <div className = "suggestions-my-profile-n1">
+                        <div className = "suggestions-my-profile-n2">
                             <p className = "suggestions-my-userid">{profile.userId}</p>
                             <p className = "suggestions-my-username">{profile.username}</p>
                         </div>
@@ -35,10 +35,10 @@ function Suggestions() {
             </div>
             {suggestions.length > 0 ? (
                 suggestions.map(suggestion => (
-                    <div className = "suggestions-my-profile">
-                        <div>
+                    <div className = "suggestions-card">
+                        <div className="suggestions-card-n1">
                             <img className="rounded-circle" src={suggestion.profilePic} alt="" />
-                            <div className="suggestions-my-profile-n1">
+                            <div className = "suggestions-card-n2">
                                 <p className="suggestions-my-userid">{suggestion.userId}</p>
                                 <p className="suggestions-my-username">Popular</p>
                             </div>

@@ -89,23 +89,21 @@
     width: 70%;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 30px;    
 }
 .suggestions-my-profile img{
     height: 43px;
     margin: auto 0;
-    position: relative;
-    top: 2px;
+    vertical-align: middle;
 }
-.suggestions-my-profile div{
+.suggestions-my-profile-n1{
     display: flex;
     align-items: center;
     column-gap: 12px;
 }
 .suggestions-my-profile small{
     color: blue;
-    position: relative;
-    top: 2px;
+    
 }
 .suggestions-my-profile h6{
     margin: 0;
@@ -115,25 +113,27 @@
     font-size:15px;
     margin-right: 3px;
 }
-.suggestions-my-profile-n1{
+.suggestions-my-profile-n2{
     display: flex;
-    flex-direction: column;
-    position: relative;    
-    top: 1px;
+    flex-direction: column;   
     width: 100%;
     align-items: flex-start;
+    
 }
 .suggestions-my-userid{
     font-weight: 600;
     font-size: 14px;
+    text-align: left;
+    line-height: 1.2;
     margin: 0;
 }
 .suggestions-my-username{
     font-size: 13px;
     margin: 0;
-    position: relative;
-    right: 3px;
+    text-align: left;
+    line-height: 1.2;
     color: #8e8e8e;
+    
 }   
 .suggestions-div2{
     display: flex;
@@ -151,4 +151,35 @@
     font-weight: 550;
     color: #8e8e8e;
     font-size: 15px;
+}
+.suggestions-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 15px auto;
+    
+
+}
+.suggestions-card-n2{
+    display: flex;
+    flex-direction: column;    
+    width: 100%;
+    justify-content: center;
+    align-items:flex-start;
+    flex: 1;
+}
+.suggestions-card img{
+    height: 43px;
+    margin: auto 0;
+    vertical-align: middle;
+}
+.suggestions-card-n1{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.suggestions-card small{
+    color: blue;
+    
 }
