@@ -13,8 +13,7 @@
         { "id": 2, "username": "mike", "text": "I should join you next time 😅" }
       ],
       "timestamp": "2025-09-10T12:00:00Z"
-    }
-    // ... keep other posts unchanged
+    }    
   ],
 
   "profile": {
