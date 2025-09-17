@@ -13,7 +13,125 @@
         { "id": 2, "username": "mike", "text": "I should join you next time 😅" }
       ],
       "timestamp": "2025-09-10T12:00:00Z"
-    }    
+    },
+    {
+      "id": 2,
+      "userId": "sarah_lee",
+      "username": "Sarah Lee",
+      "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
+      "image": "https://picsum.photos/id/1027/600/400",
+      "caption": "Loving this new book I'm reading 📚✨",
+      "likes": 92,
+      "comments": [
+        { "id": 1, "username": "emma", "text": "Which book is this?" }
+      ],
+      "timestamp": "2025-09-11T08:30:00Z"
+    },
+    {
+      "id": 3,
+      "userId": "travel_guy",
+      "username": "Travel Guy",
+      "profilePic": "https://randomuser.me/api/portraits/men/3.jpg",
+      "image": "https://picsum.photos/id/1003/600/400",
+      "caption": "Exploring the streets of Rome 🇮🇹🍕",
+      "likes": 230,
+      "comments": [
+        { "id": 1, "username": "lisa", "text": "Rome is beautiful!" },
+        { "id": 2, "username": "alex", "text": "Take me with you next time!" }
+      ],
+      "timestamp": "2025-09-12T14:20:00Z"
+    },
+    {
+      "id": 4,
+      "userId": "emma_watson",
+      "username": "Emma Watson",
+      "profilePic": "https://randomuser.me/api/portraits/women/5.jpg",
+      "image": "https://picsum.photos/id/1025/600/400",
+      "caption": "Sunday brunch vibes ☕🥐",
+      "likes": 310,
+      "comments": [
+        { "id": 1, "username": "john", "text": "Looks delicious!" }
+      ],
+      "timestamp": "2025-09-13T10:15:00Z"
+    },
+    {
+      "id": 5,
+      "userId": "mike_tyson",
+      "username": "Mike Tyson",
+      "profilePic": "https://randomuser.me/api/portraits/men/6.jpg",
+      "image": "https://picsum.photos/id/1021/600/400",
+      "caption": "Workout grind never stops 💪🥊",
+      "likes": 500,
+      "comments": [
+        { "id": 1, "username": "alex", "text": "Beast mode 🔥" }
+      ],
+      "timestamp": "2025-09-14T16:45:00Z"
+    },
+    {
+      "id": 6,
+      "userId": "lisa_rose",
+      "username": "Lisa Rose",
+      "profilePic": "https://randomuser.me/api/portraits/women/7.jpg",
+      "image": "https://picsum.photos/id/1035/600/400",
+      "caption": "Evening walk with the pup 🐶🌇",
+      "likes": 178,
+      "comments": [
+        { "id": 1, "username": "emma", "text": "So cute!!" }
+      ],
+      "timestamp": "2025-09-15T18:00:00Z"
+    },
+    {
+      "id": 7,
+      "userId": "alex_coder",
+      "username": "Alex Coder",
+      "profilePic": "https://randomuser.me/api/portraits/men/8.jpg",
+      "image": "https://picsum.photos/id/1045/600/400",
+      "caption": "Late night coding session 💻☕",
+      "likes": 145,
+      "comments": [
+        { "id": 1, "username": "john", "text": "Keep grinding bro!" }
+      ],
+      "timestamp": "2025-09-15T23:30:00Z"
+    },
+    {
+      "id": 8,
+      "userId": "nina_patel",
+      "username": "Nina Patel",
+      "profilePic": "https://randomuser.me/api/portraits/women/9.jpg",
+      "image": "https://picsum.photos/id/1055/600/400",
+      "caption": "Beach day 🌊🏖️",
+      "likes": 400,
+      "comments": [
+        { "id": 1, "username": "sarah", "text": "I miss the ocean!" }
+      ],
+      "timestamp": "2025-09-16T09:45:00Z"
+    },
+    {
+      "id": 9,
+      "userId": "david_kim",
+      "username": "David Kim",
+      "profilePic": "https://randomuser.me/api/portraits/men/11.jpg",
+      "image": "https://picsum.photos/id/1065/600/400",
+      "caption": "Concert night 🎶🎤",
+      "likes": 275,
+      "comments": [
+        { "id": 1, "username": "emma", "text": "Who’s performing?" }
+      ],
+      "timestamp": "2025-09-16T20:10:00Z"
+    },
+    {
+      "id": 10,
+      "userId": "sophia_jones",
+      "username": "Sophia Jones",
+      "profilePic": "https://randomuser.me/api/portraits/women/12.jpg",
+      "image": "https://picsum.photos/id/1075/600/400",
+      "caption": "Coffee + coding = perfect morning ☕💻",
+      "likes": 320,
+      "comments": [
+        { "id": 1, "username": "alex", "text": "Relatable 😅" }
+      ],
+      "timestamp": "2025-09-17T07:25:00Z"
+    }
   ],
 
   "profile": {
