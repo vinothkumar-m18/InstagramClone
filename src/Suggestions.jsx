@@ -35,7 +35,7 @@ function Suggestions() {
             </div>
             {suggestions.length > 0 ? (
                 suggestions.map(suggestion => (
-                    <div className = "suggestions-card">
+                    <div className = "suggestions-card" key = {suggestion.id}>
                         <div className="suggestions-card-n1">
                             <img className="rounded-circle" src={suggestion.profilePic} alt="" />
                             <div className = "suggestions-card-n2">

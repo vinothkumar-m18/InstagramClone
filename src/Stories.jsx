@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
 function Stories(){
+    const navigate = useNavigate()
     const [stories, setStories] = useState([])
     useEffect(()=>{
         fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/stories').
@@ -11,7 +13,7 @@ function Stories(){
         <div className = "story-container">
             {stories.length > 0 ? (
                 stories.map(story => (
-                    <div className = "story">
+                    <div key = {story.id} className = "story" onClick = {()=>navigate(`/story/${story.id}`)} style = {{cursor:"pointer"}}>
                         <div className = "gradient-border">
                             <img className = "rounded-circle" src={story.profilePic} alt="dp"/>
                         </div>

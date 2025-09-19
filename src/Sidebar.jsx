@@ -1,9 +1,11 @@
 import instagramText from './assets/instagram-text.png'
-function Sidebar(){    
+import { Navigate, useNavigate } from 'react-router-dom';
+function Sidebar() {
+    const navigate = useNavigate()
     return (
         <div>
-            <img className = "instagram-text" src={instagramText} alt=""/>
-            <div className = "sidebar-items">
+            <img className="instagram-text" src={instagramText} alt="" />
+            <div className="sidebar-items">
                 <div>
                     <i className="bi bi-house-door-fill fs-4" />
                     <p>Home</p>
@@ -26,7 +28,7 @@ function Sidebar(){
                 </div><div>
                     <i className="bi bi-file-plus fs-4" />
                     <p>Create</p>
-                </div><div>
+                </div><div onClick={()=>{navigate(`/profile`)}} style = {{cursor:"pointer"}}>
                     <i className="bi bi-person-circle fs-4" />
                     <p>Profile</p>
                 </div><div>
@@ -35,7 +37,7 @@ function Sidebar(){
                 </div>
             </div>
         </div>
-        
+
     );
 }
 export default Sidebar

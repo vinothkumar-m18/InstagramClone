@@ -12,11 +12,11 @@ function Posts() {
         <>
             {posts.length > 0 ? (
                 posts.map(post => (
-                    <div className="post">
+                    <div className="post" key = {post.id}>
                         <div className="post-header">
                             <div>
                                 <img className="dp rounded-circle" src={post.profilePic} alt="" />
-                                <h6>{post.username}</h6>
+                                <h6>{post.userId}</h6>
                             </div>
                             <i className="bi bi-three-dots"></i>
                         </div>
@@ -34,7 +34,7 @@ function Posts() {
                             </div>
                             <h6>{post.likes} likes</h6>
                             <p>
-                                <span className = "post-footer-username">{post.username.toLowerCase()}</span> {post.caption}
+                                <span className = "post-footer-username">{post.userId.toLowerCase()}</span> {post.caption}
                             </p>
                            
                         </div>

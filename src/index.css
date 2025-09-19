@@ -210,3 +210,13 @@
     text-align: center;
     font-weight: 400;
 }
+.story-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+.profile{
+    height: 100px;
+    width: 100px;
+}
