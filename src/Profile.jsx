@@ -10,14 +10,18 @@ function Profile() {
     ))
   }
   const handleUpdate = async ()=>{
-    axios.put('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/profile', profile).
+    if(!profile || !profile.id){
+      console.log("profile or id is not found. Cannot update profile")
+      return ;
+    }
+    axios.put(`https://68cd5e16da4697a7f305b777.mockapi.io/api/profile?id=101`, profile).
      then(console.log("updated")).
      catch(error => console.log(error))
 
   }
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/profile').
-      then(data => setProfile(data.data)).
+    axios.get('https://68cd5e16da4697a7f305b777.mockapi.io/api/profile?id=101').
+      then(res => setProfile(res.data)).
       catch(error => console.log(error))
   }, [])
   return (
