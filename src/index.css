@@ -174,8 +174,7 @@
     column-gap: 12px;
 }
 .suggestions-card small{
-    color: blue;
-    
+    color: blue;    
 }
 .gradient-border{
     width:77px;
@@ -219,4 +218,19 @@
 .profile{
     height: 100px;
     width: 100px;
+}
+.following{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.following p{
+    margin: 0;  
+}
+.following-list{
+    display: inline-block;
+    width: 100%;
 }

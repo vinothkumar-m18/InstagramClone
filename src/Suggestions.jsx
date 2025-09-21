@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 function Suggestions() {
     const [profile, setProfile] = useState(null)
@@ -13,6 +14,11 @@ function Suggestions() {
             then(data => setSuggestions(data)).
             catch(error => console.log(error))
     }, [])
+    const handleFollow = async (id, userId)=>{
+        axios.post('https://instagram-clone-api-panm.onrender.com/following', {"id":id, "userId":userId}).
+         then(alert("followed")).
+         catch(error => console.log(error))
+    }
     return (
         <>
             {profile ? (
@@ -43,7 +49,7 @@ function Suggestions() {
                                 <p className="suggestions-my-username">Popular</p>
                             </div>
                         </div>
-                        <small >Follow</small>
+                        <small><a onClick = {()=> {handleFollow(suggestion.id, suggestion.userId)}} style = {{"cursor":"pointer"}}>Follow</a></small>
                     </div>
                 ))
             ) : (
