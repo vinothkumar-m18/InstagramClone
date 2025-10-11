@@ -4,7 +4,7 @@ function Stories(){
     const navigate = useNavigate()
     const [stories, setStories] = useState([])
     useEffect(()=>{
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/stories').
+        fetch('http://localhost:5000/stories').
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log(error))

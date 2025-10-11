@@ -9,8 +9,16 @@
       "caption": "Morning jog to clear the mind 🏃‍♂️🌅",
       "likes": 128,
       "comments": [
-        { "id": 1, "username": "alice", "text": "Great start to the day!" },
-        { "id": 2, "username": "mike", "text": "I should join you next time 😅" }
+        {
+          "id": 1,
+          "username": "alice",
+          "text": "Great start to the day!"
+        },
+        {
+          "id": 2,
+          "username": "mike",
+          "text": "I should join you next time 😅"
+        }
       ],
       "timestamp": "2025-09-10T12:00:00Z"
     },
@@ -23,7 +31,11 @@
       "caption": "Loving this new book I'm reading 📚✨",
       "likes": 92,
       "comments": [
-        { "id": 1, "username": "emma", "text": "Which book is this?" }
+        {
+          "id": 1,
+          "username": "emma",
+          "text": "Which book is this?"
+        }
       ],
       "timestamp": "2025-09-11T08:30:00Z"
     },
@@ -36,8 +48,16 @@
       "caption": "Exploring the streets of Rome 🇮🇹🍕",
       "likes": 230,
       "comments": [
-        { "id": 1, "username": "lisa", "text": "Rome is beautiful!" },
-        { "id": 2, "username": "alex", "text": "Take me with you next time!" }
+        {
+          "id": 1,
+          "username": "lisa",
+          "text": "Rome is beautiful!"
+        },
+        {
+          "id": 2,
+          "username": "alex",
+          "text": "Take me with you next time!"
+        }
       ],
       "timestamp": "2025-09-12T14:20:00Z"
     },
@@ -50,7 +70,11 @@
       "caption": "Sunday brunch vibes ☕🥐",
       "likes": 310,
       "comments": [
-        { "id": 1, "username": "john", "text": "Looks delicious!" }
+        {
+          "id": 1,
+          "username": "john",
+          "text": "Looks delicious!"
+        }
       ],
       "timestamp": "2025-09-13T10:15:00Z"
     },
@@ -63,7 +87,11 @@
       "caption": "Workout grind never stops 💪🥊",
       "likes": 500,
       "comments": [
-        { "id": 1, "username": "alex", "text": "Beast mode 🔥" }
+        {
+          "id": 1,
+          "username": "alex",
+          "text": "Beast mode 🔥"
+        }
       ],
       "timestamp": "2025-09-14T16:45:00Z"
     },
@@ -76,7 +104,11 @@
       "caption": "Evening walk with the pup 🐶🌇",
       "likes": 178,
       "comments": [
-        { "id": 1, "username": "emma", "text": "So cute!!" }
+        {
+          "id": 1,
+          "username": "emma",
+          "text": "So cute!!"
+        }
       ],
       "timestamp": "2025-09-15T18:00:00Z"
     },
@@ -89,7 +121,11 @@
       "caption": "Late night coding session 💻☕",
       "likes": 145,
       "comments": [
-        { "id": 1, "username": "john", "text": "Keep grinding bro!" }
+        {
+          "id": 1,
+          "username": "john",
+          "text": "Keep grinding bro!"
+        }
       ],
       "timestamp": "2025-09-15T23:30:00Z"
     },
@@ -102,7 +138,11 @@
       "caption": "Beach day 🌊🏖️",
       "likes": 400,
       "comments": [
-        { "id": 1, "username": "sarah", "text": "I miss the ocean!" }
+        {
+          "id": 1,
+          "username": "sarah",
+          "text": "I miss the ocean!"
+        }
       ],
       "timestamp": "2025-09-16T09:45:00Z"
     },
@@ -115,7 +155,11 @@
       "caption": "Concert night 🎶🎤",
       "likes": 275,
       "comments": [
-        { "id": 1, "username": "emma", "text": "Who’s performing?" }
+        {
+          "id": 1,
+          "username": "emma",
+          "text": "Who’s performing?"
+        }
       ],
       "timestamp": "2025-09-16T20:10:00Z"
     },
@@ -128,19 +172,21 @@
       "caption": "Coffee + coding = perfect morning ☕💻",
       "likes": 320,
       "comments": [
-        { "id": 1, "username": "alex", "text": "Relatable 😅" }
+        {
+          "id": 1,
+          "username": "alex",
+          "text": "Relatable 😅"
+        }
       ],
       "timestamp": "2025-09-17T07:25:00Z"
     }
   ],
-
   "profile": {
     "id": 101,
     "userId": "vinoth_kumar",
     "username": "Vinoth Kumar",
     "profilePic": "https://randomuser.me/api/portraits/men/10.jpg"
   },
-
   "suggestions": [
     {
       "id": 201,
@@ -163,7 +209,6 @@
       "profilePic": "https://randomuser.me/api/portraits/men/8.jpg"
     }
   ],
-
   "stories": [
     {
       "id": 1,
@@ -195,5 +240,6 @@
       "profilePic": "https://randomuser.me/api/portraits/men/6.jpg",
       "storyImage": "https://picsum.photos/id/1021/400/600"
     }
-  ]
+  ],
+  "following": []
 }

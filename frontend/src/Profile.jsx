@@ -3,7 +3,7 @@ import axios from 'axios'
 function Profile() {
   const [profile, setProfile] = useState(null)
   const [following, setFollowing] = useState([])
-  const [loadingMsg, setLoadingMsg] = useState('Fetching data for the first time takes 15-30 seconds. Please be patient')
+  
   const [unFollowed, setUnFollowed] = useState(0)
   function handleOnChange(event) {
     setProfile(prev => ({
@@ -17,23 +17,23 @@ function Profile() {
       console.log("profile or id is not found. Cannot update profile")
       return;
     }
-    axios.put(`https://instagram-clone-api-panm.onrender.com/profile`, profile).
+    axios.put(`http://localhost:5000/profile`, profile).
       then(console.log("updated")).
       catch(error => console.log(error))
 
   }
   const handleUnFollow = async (id)=>{
-    axios.delete(`https://instagram-clone-api-panm.onrender.com/following/${id}`).
+    axios.delete(`http://localhost:5000/following/${id}`).
      then(alert("unfollowed")).
      then(()=>setUnFollowed(!unFollowed)).
      catch(error => console.log(error))     
   }
   useEffect(() => {
-    axios.get('https://instagram-clone-api-panm.onrender.com/profile').
+    axios.get('http://localhost:5000/profile').
       then(res => setProfile(res.data)).
       catch(error => console.log(error))
 
-    axios.get('https://instagram-clone-api-panm.onrender.com/following').
+    axios.get('http://localhost:5000/following').
       then(res => {
         setFollowing(res.data)
         setLoadingMsg("")

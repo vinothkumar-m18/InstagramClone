@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 function Posts() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/posts').
-            then(data => data.json()).
-            then(data => setPosts(data)).
-            catch(error => console.log(error))
+        fetch('http://localhost:5000/posts')
+            .then(data => data.json())
+            .then(data => setPosts(data))
+            .catch(error => console.log(error))
     }, [])
 
     return (

@@ -4,18 +4,18 @@ function Suggestions() {
     const [profile, setProfile] = useState(null)
     const [suggestions, setSuggestions] = useState([])
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/profile').
+        fetch('http://localhost:5000/profile').
             then(data => data.json()).
             then(data => setProfile(data)).
             catch(error => console.log(error))
 
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/suggestions').
+        fetch('http://localhost:5000/suggestions').
             then(data => data.json()).
             then(data => setSuggestions(data)).
             catch(error => console.log(error))
     }, [])
     const handleFollow = async (id, userId)=>{
-        axios.post('https://instagram-clone-api-panm.onrender.com/following', {"id":id, "userId":userId}).
+        axios.post('http://localhost:5000/following', {"id":id, "userId":userId}).
          then(alert("followed")).
          catch(error => console.log(error))
     }
