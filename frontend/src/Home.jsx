@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar";
-import Feed from './Feed'
-import Suggestions from './Suggestions'
+import Feed from './Feed';
+import Suggestions from './Suggestions';
 function Home(){
     return (
         <div className = "home"> 
@@ -10,4 +10,4 @@ function Home(){
         </div>
     );
 }
-export default Home
+export default Home;

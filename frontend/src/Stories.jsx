@@ -1,8 +1,8 @@
-import {useState, useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 function Stories(){
-    const navigate = useNavigate()
-    const [stories, setStories] = useState([])
+    const navigate = useNavigate();
+    const [stories, setStories] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/stories').
          then(data => data.json()).

@@ -36,20 +36,13 @@ function Profile() {
     axios.get('http://localhost:5000/following').
       then(res => {
         setFollowing(res.data)
-        setLoadingMsg("")
       }
       ).
       catch(error => console.log(error))
   }, [unFollowed])
   return (
     <>
-      <div className="m-5">
-        {loadingMsg && (
-          <div className="alert alert-info">
-            {loadingMsg}
-          </div>
-        )}
-      </div>
+      
       <div className="m-5">
         {profile ? (
           <div>

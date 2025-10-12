@@ -1,17 +1,17 @@
-import {useParams, Link, useNavigate} from 'react-router-dom'
-import {useEffect, useState} from 'react'
+import {useParams, Link, useNavigate} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 function ViewStory(){
-    const {id} = useParams()
-    const [story, setStory] = useState(null)
-    const [stories, setStories] = useState([])
-    const navigate = useNavigate()
+    const {id} = useParams();
+    const [story, setStory] = useState(null);
+    const [stories, setStories] = useState([]);
+    const navigate = useNavigate();
     useEffect(()=>{
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/stories/' + id).
+        fetch('http://localhost:5000/stories/' + id).
          then(data => data.json()).
          then(data => setStory(data)).
          catch(error => console.log(error))
 
-        fetch('https://my-json-server.typicode.com/vinothkumar-m18/InstagramClone/stories').
+        fetch('http://localhost:5000/stories/').
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log(error))

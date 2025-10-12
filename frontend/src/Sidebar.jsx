@@ -1,7 +1,7 @@
-import instagramText from './assets/instagram-text.png'
+import instagramText from './assets/instagram-text.png';
 import { Navigate, useNavigate } from 'react-router-dom';
 function Sidebar() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <div>
             <img className="instagram-text" src={instagramText} alt="" />
@@ -37,7 +37,6 @@ function Sidebar() {
                 </div>
             </div>
         </div>
-
     );
 }
 export default Sidebar

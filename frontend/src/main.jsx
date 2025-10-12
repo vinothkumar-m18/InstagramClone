@@ -1,9 +1,9 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './Home.jsx'
-import ViewStory from './ViewStory.jsx'
-import Profile from './Profile.jsx'
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Home.jsx';
+import ViewStory from './ViewStory.jsx';
+import Profile from './Profile.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
   {
     basename: '/InstagramClone'
   }
-)
+);
 createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
-)
+);
