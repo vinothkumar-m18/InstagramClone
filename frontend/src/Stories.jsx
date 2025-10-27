@@ -8,7 +8,7 @@ function Stories(){
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log(error))
-    })
+    },[])
     return (
         <div className = "story-container">
             {stories.length > 0 ? (

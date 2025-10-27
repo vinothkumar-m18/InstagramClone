@@ -1,14 +1,29 @@
-import {readDatabase, writeDatabase} from '../utils/dbHelper.js';
+import {Profile} from '../models/Profile.js';
 
-export const getProfile = (req, res)=>{
-    const db = readDatabase();
-    res.json(db.profile);
+export const getProfile = async (req, res)=>{
+    try{
+        const profile = await Profile.findOne();
+        if(!profile) return res.status(404).json({message:'profile not found'});
+        res.json(profile);
+    }catch(error){
+        res.status(500).json({message:'mongodb server error'});
+    }
 };
-export const updateProfile = (req, res)=>{
-    const db = readDatabase();
-    const updatedProfile = req.body;
-    db.profile = updatedProfile;
-    writeDatabase(db);
-    res.status(201).json(db.profile);
+export const updateProfile = async (req, res)=>{
+    try{
+        const updatedProfile = req.body;
+        const profile = await Profile.findOneAndUpdate({
+            id:updatedProfile.id            
+        },
+        updatedProfile,
+        {
+            new:true,
+            upsert:true
+        }
+        )
+        res.status(201).json(profile);
+    }catch(error){
+        res.status(500).json({message:'invalid data'});
+    }
 };
 

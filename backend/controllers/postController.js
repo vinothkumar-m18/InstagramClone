@@ -1,5 +1,9 @@
-import {readDatabase} from '../utils/dbHelper.js'
-export const getPosts = (req, res)=>{
-    const db = readDatabase();
-    res.json(db.posts);
+import {Post} from '../models/Post.js';
+export const getPosts = async (req, res)=>{
+    try{
+        const posts = await Post.find();
+        res.json(posts);
+    }catch(error){
+        res.status(500).json({message:'mongodb server error'});
+    }
 }

@@ -6,19 +6,19 @@ function ViewStory(){
     const [stories, setStories] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch('http://localhost:5000/stories/' + id).
+        fetch(`http://localhost:5000/stories/${id}`).
          then(data => data.json()).
          then(data => setStory(data)).
-         catch(error => console.log(error))
+         catch(error => console.log('error fetching story : ', error));
 
-        fetch('http://localhost:5000/stories/').
+        fetch(`http://localhost:5000/stories/?t=${new Date().getTime()}`).
          then(data => data.json()).
          then(data => setStories(data)).
-         catch(error => console.log(error))
+         catch(error => console.log('error fetching stories : ', error));
     }, [id])
     function goPrev(){
         const prevId = parseInt(id) -1
-        if(prevId > 0){
+        if(prevId > 0 && prevId <= stories.length){
             navigate(`/story/${prevId}`)
         }else{
             navigate(`/`)

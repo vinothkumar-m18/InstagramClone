@@ -6,10 +6,17 @@ import storyRoutes from './routes/storyRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import suggestionRoutes from './routes/suggestionRoutes.js';
 import followingRoutes from './routes/followingRoutes.js';
+import connectDb from './config/database.js';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
-const PORT = 5000;
-
+const PORT = process.env.PORT || 5000;
+connectDb();
+app.use((req, res, next)=>{
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+})
 app.use(cors());
 app.use(express.json());
 app.use(logger);

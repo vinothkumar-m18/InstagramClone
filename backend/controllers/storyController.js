@@ -1,11 +1,21 @@
-import { readDatabase } from "../utils/dbHelper.js";
-export const getStories = (req, res)=>{
-    const db = readDatabase();
-    res.json(db.stories);
+import {Story} from '../models/Story.js';
+
+export const getStories = async (req, res)=>{
+    try{
+        const stories = await Story.find();
+        if(!stories.length) return res.status(404).json({message:'stories not found'});
+        res.json(stories);
+    }catch(error){
+        res.status(500).json({message:'mongodb server error'});
+    }
 };
-export const getStory = (req, res)=>{   
-    const db = readDatabase();
-    const storyId = parseInt(req.params.id);
-    const story = db.stories.find(story => story.id === storyId);
-    res.json(story);
+export const getStory = async (req, res)=>{   
+    try{
+        const storyId = parseInt(req.params.id);
+        const story = await Story.findOne({id:storyId});
+        if(!story) return res.status(404).json({message:'story not found'});
+        res.json(story);        
+    }catch(error){
+        res.status(500).json({message:'mongodb server error'});
+    }
 };
