@@ -1,7 +1,11 @@
-import instagramText from './assets/instagram-text.png';
+import instagramText from '../assets/instagram-text.png';
 import { Navigate, useNavigate } from 'react-router-dom';
+import CreatePostModal from './CreatePostModal';
+import { useState } from 'react';
 function Sidebar() {
     const navigate = useNavigate();
+    const [showCreate, setShowCreate] = useState(false);
+
     return (
         <div>
             <img className="instagram-text" src={instagramText} alt="" />
@@ -25,9 +29,14 @@ function Sidebar() {
                 </div><div>
                     <i className="bi bi-heart fs-4" />
                     <p>Notifications</p>
-                </div><div>
+                </div><div onClick = {()=>setShowCreate(true)}>
                     <i className="bi bi-file-plus fs-4" />
-                    <p>Create</p>
+                    <button >Create</button>
+                    {showCreate && (
+                        <CreatePostModal onClose = {()=>setShowCreate(false)}
+                        onCreated = {()=>alert('post created successfully')}                   
+                        />
+                    )}
                 </div><div onClick={()=>{navigate(`/profile`)}} style = {{cursor:"pointer"}}>
                     <i className="bi bi-person-circle fs-4" />
                     <p>Profile</p>

@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 const commentSchema = mongoose.Schema({
-    id:{
-        type:Number,
-        required:true
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:'User'
     },
     userName : {
         type:String,
@@ -11,25 +12,16 @@ const commentSchema = mongoose.Schema({
     text:{
         type:String,
         required:true
-    }
+    },    
+},{
+    timestamps:true
 })
-const postSchema = mongoose.Schema({
-    id: {
-        type: Number,
-        required: true
-    },
-    userId: {
-        type: String,
-        required: true
-    },
-    userName: {
-        type: String,
-        required: true
-    },
-    profilePic: {
-        type: String,
-        required: true
-    },
+const postSchema = mongoose.Schema({        
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref:'User'
+    },    
     image: {
         type: String,
         required: true
@@ -38,16 +30,22 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    likes: {
-        type: Number,
-        required: true
-    },
+    likes: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+    }]
+    ,
     comments: [commentSchema],
     timestamp: {
         type: Date,
         default: Date.now()
+    },
+    isReel:{
+        type:Boolean,
+        default:false
     }
 },
     { timestamps: true }
 )
-export const Post = mongoose.model('Post', postSchema);
+const Post = mongoose.model('Post', postSchema);
+export default Post;

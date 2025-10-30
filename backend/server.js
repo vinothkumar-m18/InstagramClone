@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(logger);
 
 // routes 
-app.use('/posts', postRoutes);
+app.use('/api/posts', postRoutes);
 app.use('/stories', storyRoutes);
 app.use('/profile', profileRoutes);
 app.use('/suggestions', suggestionRoutes);

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 function Posts() {
+
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/posts')
+        fetch('http://localhost:5000/api/posts')
             .then(data => data.json())
             .then(data => setPosts(data))
             .catch(error => console.log(error))
@@ -12,7 +13,7 @@ function Posts() {
         <>
             {posts.length > 0 ? (
                 posts.map(post => (
-                    <div className="post" key = {post.id}>
+                    <div className="post" key = {post._id}>
                         <div className="post-header">
                             <div>
                                 <img className="dp rounded-circle" src={post.profilePic} alt="" />
