@@ -1,5 +1,7 @@
 import express from 'express';
-import {getPosts} from '../controllers/postController.js';
+import {createPost, getPosts} from '../controllers/postController.js';
+import upload from '../middlewares/postUpload.js';
 const router = express.Router();
 router.get('/', getPosts);
+router.post('/', upload.single('media'), createPost);
 export default router;

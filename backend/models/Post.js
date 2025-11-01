@@ -22,7 +22,7 @@ const postSchema = mongoose.Schema({
         required: true,
         ref:'User'
     },    
-    image: {
+    media: {
         type: String,
         required: true
     },
@@ -35,11 +35,7 @@ const postSchema = mongoose.Schema({
         ref:'User'
     }]
     ,
-    comments: [commentSchema],
-    timestamp: {
-        type: Date,
-        default: Date.now()
-    },
+    comments: [commentSchema],    
     isReel:{
         type:Boolean,
         default:false

@@ -1,5 +1,5 @@
 import {useState, usestate} from 'react';
-
+import './CreatePostModal.css';
 function CreatePostModal({onClose, onCreated}){
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState("");
@@ -17,17 +17,17 @@ function CreatePostModal({onClose, onCreated}){
         if(!file) return alert('pick an image or video');
         setLoading(true);
         const form = new FormData();
-        form.append('file', file);
+        form.append('media', file);
         form.append('caption', caption);
 
         try{
-            await fetch('http://localhost:5000/posts', {
+            const response = await fetch('http://localhost:5000/api/posts', {
                 method:'POST',
                 credentials:'include',
                 body:form,
             });
-            if(!res.ok) throw new Error('upload failed');
-            const newPost = await res.json();
+            if(!response.ok) throw new Error('upload failed');
+            const newPost = await response.json();
             onCreated(newPost);
             onClose();
         }catch(error){
@@ -43,7 +43,7 @@ function CreatePostModal({onClose, onCreated}){
             
             <div className = "modal-backdrop" onClick = {onClose}>
                 <div className = "modal-content" onClick = {(e)=>e.stopPropagation()}>
-                    <h2>Create Post/ Reel</h2>
+                    <h2>Create Post/Reel</h2>
                     {preview && (
                         <div className = "preview">
                             {file.type.startsWith("video") ? (
@@ -56,6 +56,7 @@ function CreatePostModal({onClose, onCreated}){
 
                     <form onSubmit = {handleSubmit}>
                         <input type="file"
+                                name="media"
                                accept = "image/*, video/mp4"
                                onChange = {handleFileOnChange}
                                required
@@ -64,6 +65,7 @@ function CreatePostModal({onClose, onCreated}){
                                   value = {caption}
                                   onChange = {(e)=> setCaption(e.target.value)}
                                   rows = {3}
+                                  required
                         />
                         <div className = "actions">
                             <button type = "submit"

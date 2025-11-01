@@ -16,8 +16,8 @@ function Posts() {
                     <div className="post" key = {post._id}>
                         <div className="post-header">
                             <div>
-                                <img className="dp rounded-circle" src={post.profilePic} alt="" />
-                                <h6>{post.userId}</h6>
+                                <img className="dp rounded-circle" src={post.user?.profilePic} alt="" />
+                                <h6>{post.user?.userId}</h6>
                             </div>
                             <i className="bi bi-three-dots"></i>
                         </div>
@@ -35,7 +35,7 @@ function Posts() {
                             </div>
                             <h6>{post.likes} likes</h6>
                             <p>
-                                <span className = "post-footer-username">{post.userId.toLowerCase()}</span> {post.caption}
+                                <span className = "post-footer-username">{post.user?.userId.toLowerCase()}</span> {post.caption}
                             </p>
                            
                         </div>
