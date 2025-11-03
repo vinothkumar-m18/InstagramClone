@@ -45,10 +45,23 @@ export const getPosts = async (req, res) => {
     try {
         const posts = await Post.find()
             .populate('user', 'userId userName profilePic')
+            .populate('comments.userId', 'userId userName')
+            
             .sort({ createdAt: -1 });
         res.json(posts);
     } catch (error) {
         res.status(500).json({ message: 'mongodb server error' });
     }
 }
-
+export const likePost = async (req, res)=>{
+    try{
+        const post = await Post.findById(req.params.id);
+        if(!post) return res.status(404).json({message:'post not found'});
+        post.likes += 1;
+        post.save();
+        res.json({likes:post.likes});
+    }catch(error){
+        console.log(error);
+        res.status(500).json({error:'inside likepost ', error});
+    }
+};

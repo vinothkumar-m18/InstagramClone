@@ -4,11 +4,7 @@ const commentSchema = mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         required:true,
         ref:'User'
-    },
-    userName : {
-        type:String,
-        required:true
-    },
+    },    
     text:{
         type:String,
         required:true
@@ -30,10 +26,10 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    likes: [{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User'
-    }]
+    likes: {
+        type:Number,
+        default:0
+    }
     ,
     comments: [commentSchema],    
     isReel:{

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 function Posts() {
-
+    
     const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/api/posts')
@@ -8,7 +8,21 @@ function Posts() {
             .then(data => setPosts(data))
             .catch(error => console.log(error))
     }, [])
-
+    const handleLike = async (postId)=>{
+        try{
+            const res = await fetch(`http://localhost:5000/api/posts/${postId}/like`, {
+                method:'POST'
+            });
+            const {likes} = await res.json();
+            setPosts(prevPosts => 
+                prevPosts.map(post =>
+                    post._id === postId ? {...post, likes} : post
+                )
+            );
+        }catch(error){
+            console.log('like failed ', error.message);            
+        }
+    };
     return (
         <>
             {posts.length > 0 ? (
@@ -22,12 +36,15 @@ function Posts() {
                             <i className="bi bi-three-dots"></i>
                         </div>
                         <div className="post-image">
-                            <img src={post.image} alt="" />
+                            <img src={post.media} alt="" />
                         </div>
                         <div className = "post-footer">  
                             <div className="post-icon-list ">
                                 <div >
-                                    <i className="bi bi-heart fs-4" />
+                                    <i className="bi bi-heart fs-4" 
+                                        style = {{"cursor":"pointer", color:'#ed4956'}}
+                                        onClick = {()=> handleLike(post._id)}
+                                    />
                                     <i className="bi bi-chat fs-4"></i>
                                     <i className="bi bi-send fs-4"></i>
                                 </div>
