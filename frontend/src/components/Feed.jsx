@@ -1,14 +1,14 @@
 import Posts from "./Posts";
 import Stories from "./Stories";
 
-function Feed(){
+function Feed({postRefreshTrigger}){
     return (
         <>
             <div className = "stories">
                 <Stories/>
             </div>
             <div className = "post-container">
-                <Posts/>
+                <Posts key = {postRefreshTrigger}/>
             </div>
         </>
     );

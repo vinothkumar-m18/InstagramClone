@@ -5,11 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && rm -rf docs && mv dist docs && git add docs && git commit -m 'update docs' && git push origin main"
+    "deploy": "vite build && rm -rf docs && mv dist docs && git add docs && git commit -m \"deploy: update github pages\" && git push origin main"
   },
   "dependencies": {
     "axios": "^1.12.2",

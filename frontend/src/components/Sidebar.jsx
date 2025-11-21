@@ -28,7 +28,7 @@ function Sidebar({onCreateClick}) {
                     <p>Notifications</p>
                 </div><div onClick = {onCreateClick} style = {{"cursor" : "pointer"}}>
                     <i className="bi bi-file-plus fs-4" />
-                    <button >Create</button>
+                    <p>Create</p>
                     
                 </div><div onClick={()=>{navigate(`/profile`)}} style = {{cursor:"pointer"}}>
                     <i className="bi bi-person-circle fs-4" />

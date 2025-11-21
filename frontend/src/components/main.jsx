@@ -7,7 +7,8 @@ import Profile from './Profile.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <Home />,
+    
   },
   {
     path: '/story/:id',
