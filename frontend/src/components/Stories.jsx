@@ -5,7 +5,7 @@ function Stories(){
     const navigate = useNavigate();
     const [stories, setStories] = useState([]);
     useEffect(()=>{
-        fetch(`${API_BASE}/stories`).
+        fetch(`${API_BASE}/api/stories`).
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log(error))

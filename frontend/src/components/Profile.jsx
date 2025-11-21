@@ -29,11 +29,11 @@ function Profile() {
      catch(error => console.log(error))     
   }
   useEffect(() => {
-    axios.get(`${API_BASE}/profile`).
+    axios.get(`${API_BASE}/api/profile`).
       then(res => setProfile(res.data)).
       catch(error => console.log(error))
 
-    axios.get(`${API_BASE}/following`).
+    axios.get(`${API_BASE}/api/following`).
       then(res => {
         setFollowing(res.data)
       }

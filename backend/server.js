@@ -28,10 +28,10 @@ app.use(logger);
 
 // routes 
 app.use('/api/posts', postRoutes);
-app.use('/stories', storyRoutes);
-app.use('/profile', profileRoutes);
-app.use('/suggestions', suggestionRoutes);
-app.use('/following', followingRoutes);
+app.use('/api/stories', storyRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/suggestions', suggestionRoutes);
+app.use('/api/following', followingRoutes);
 
 const startServer = async ()=>{
     await connectDb();
