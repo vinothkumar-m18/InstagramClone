@@ -1,6 +1,7 @@
 import Post from '../models/Post.js';
 import cloudinary from '../config/cloudinary.js';
 import User from '../models/User.js';
+
 const TEST_USER_ID = "ram_kumar";
 
 export const createPost = async (req, res) => {
@@ -42,11 +43,13 @@ export const createPost = async (req, res) => {
     }
 }
 export const getPosts = async (req, res) => {
+    const COMMENT_POPULATE = {
+        path:''
+    }
     try {
         const posts = await Post.find()
             .populate('user', 'userId userName profilePic')
-            .populate('comments.userId', 'userId userName')
-            
+            .populate('comments.user', 'userName profilePic')            
             .sort({ createdAt: -1 });
         res.json(posts);
     } catch (error) {
@@ -65,3 +68,31 @@ export const likePost = async (req, res)=>{
         res.status(500).json({error:'inside likepost ', error});
     }
 };
+export const commentPost = async (req, res)=>{
+    try{
+        const post = await Post.findById(req.params.id);
+        if(!post) return res.status(404).json({error:'post not found'});
+        const user = await User.findOne({userId:'ram_kumar'});
+        if(!user) return res.status(404).json({message:'user not found'});
+        console.log(`incoming request : ${user._id} and ${req.body.text}`);
+        console.log('comment to push ', {
+            user:user._id,
+            text:req.body.text
+        });
+        post.comments.push({
+            user:user._id,
+            text:req.body.text
+        });
+        console.log('post.comments before save ', post.comments);
+        await post.save();
+        console.log('comment added');
+        const populatedPost = await Post.findById(req.params.id)
+            .populate('comments.user', 'userName profilePic');
+        console.log('printing inside comment post ',JSON.stringify(populatedPost.comments, null, 2)); 
+        res.json(populatedPost.comments);
+               
+    }catch(error){
+        console.log('comment error ', error.message);
+        res.status(500).json({error:error.message});
+    }
+}
