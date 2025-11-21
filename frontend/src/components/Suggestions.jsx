@@ -5,18 +5,18 @@ function Suggestions() {
     const [profile, setProfile] = useState(null)
     const [suggestions, setSuggestions] = useState([])
     useEffect(() => {
-        fetch(`${API_BASE}/profile`).
+        fetch(`${API_BASE}/api/profile`).
             then(data => data.json()).
             then(data => setProfile(data)).
             catch(error => console.log(error))
 
-        fetch(`${API_BASE}/suggestions`).
+        fetch(`${API_BASE}/api/suggestions`).
             then(data => data.json()).
             then(data => setSuggestions(data)).
             catch(error => console.log(error))
     }, [])
     const handleFollow = async (id, userId)=>{
-        axios.post(`${API_BASE}/following`, {"id":id, "userId":userId}).
+        axios.post(`${API_BASE}/api/following`, {"id":id, "userId":userId}).
          then(alert("followed")).
          catch(error => console.log(error))
     }

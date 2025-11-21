@@ -7,12 +7,12 @@ function ViewStory(){
     const [stories, setStories] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch(`${API_BASE}/stories/${id}`).
+        fetch(`${API_BASE}/api/stories/${id}`).
          then(data => data.json()).
          then(data => setStory(data)).
          catch(error => console.log('error fetching story : ', error));
 
-        fetch(`${API_BASE}/stories/?t=${new Date().getTime()}`).
+        fetch(`${API_BASE}/api/stories/?t=${new Date().getTime()}`).
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log('error fetching stories : ', error));
