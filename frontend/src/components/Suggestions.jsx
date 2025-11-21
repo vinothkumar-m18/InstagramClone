@@ -1,21 +1,22 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 function Suggestions() {
+    const API_BASE = "https://instagramclone-0kzj.onrender.com";
     const [profile, setProfile] = useState(null)
     const [suggestions, setSuggestions] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/profile').
+        fetch(`${API_BASE}/profile`).
             then(data => data.json()).
             then(data => setProfile(data)).
             catch(error => console.log(error))
 
-        fetch('http://localhost:5000/suggestions').
+        fetch(`${API_BASE}/suggestions`).
             then(data => data.json()).
             then(data => setSuggestions(data)).
             catch(error => console.log(error))
     }, [])
     const handleFollow = async (id, userId)=>{
-        axios.post('http://localhost:5000/following', {"id":id, "userId":userId}).
+        axios.post(`${API_BASE}/following`, {"id":id, "userId":userId}).
          then(alert("followed")).
          catch(error => console.log(error))
     }

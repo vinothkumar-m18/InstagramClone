@@ -1,10 +1,11 @@
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 function Stories(){
+    const API_BASE = "https://instagramclone-0kzj.onrender.com";
     const navigate = useNavigate();
     const [stories, setStories] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/stories').
+        fetch(`${API_BASE}/stories`).
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log(error))

@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState, useRef} from "react";
 import CommentModal from './CommentModal.jsx';
 function Posts() {
-    
+    const API_BASE = "https://instagramclone-0kzj.onrender.com";
     const [posts, setPosts] = useState([]);
     const [modalPost, setModalPost] = useState(null);
     const commentInputRefs = useRef({});
     const refreshPosts = useCallback(()=>{
-        fetch('http://localhost:5000/api/posts')
+        fetch(`${API_BASE}/api/posts`)
             .then(data => data.json())
             .then(data => setPosts(data))
             .catch(error => console.log(error))        
@@ -18,7 +18,7 @@ function Posts() {
 
     const handleLike = async (postId)=>{
         try{
-            const res = await fetch(`http://localhost:5000/api/posts/${postId}/like`, {
+            const res = await fetch(`${API_BASE}/api/posts/${postId}/like`, {
                 method:'POST'
             });
             const {likes} = await res.json();
@@ -32,7 +32,7 @@ function Posts() {
         }
     };
     const handleComment = async (postId, text)=>{
-        const response = await fetch(`http://localhost:5000/api/posts/${postId}/comment`, {
+        const response = await fetch(`${API_BASE}/api/posts/${postId}/comment`, {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'

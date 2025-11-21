@@ -1,17 +1,18 @@
 import {useParams, Link, useNavigate} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 function ViewStory(){
+    const API_BASE = "https://instagramclone-0kzj.onrender.com";
     const {id} = useParams();
     const [story, setStory] = useState(null);
     const [stories, setStories] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch(`http://localhost:5000/stories/${id}`).
+        fetch(`${API_BASE}/stories/${id}`).
          then(data => data.json()).
          then(data => setStory(data)).
          catch(error => console.log('error fetching story : ', error));
 
-        fetch(`http://localhost:5000/stories/?t=${new Date().getTime()}`).
+        fetch(`${API_BASE}/stories/?t=${new Date().getTime()}`).
          then(data => data.json()).
          then(data => setStories(data)).
          catch(error => console.log('error fetching stories : ', error));

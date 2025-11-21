@@ -3,7 +3,7 @@ import axios from 'axios'
 function Profile() {
   const [profile, setProfile] = useState(null)
   const [following, setFollowing] = useState([])
-  
+  const API_BASE = "https://instagramclone-0kzj.onrender.com";
   const [unFollowed, setUnFollowed] = useState(0)
   function handleOnChange(event) {
     setProfile(prev => ({
@@ -17,23 +17,23 @@ function Profile() {
       console.log("profile or id is not found. Cannot update profile")
       return;
     }
-    axios.put(`http://localhost:5000/profile`, profile).
+    axios.put(`${API_BASE}/profile`, profile).
       then(console.log("updated")).
       catch(error => console.log(error))
 
   }
   const handleUnFollow = async (id)=>{
-    axios.delete(`http://localhost:5000/following/${id}`).
+    axios.delete(`${API_BASE}/following/${id}`).
      then(alert("unfollowed")).
      then(()=>setUnFollowed(!unFollowed)).
      catch(error => console.log(error))     
   }
   useEffect(() => {
-    axios.get('http://localhost:5000/profile').
+    axios.get(`${API_BASE}/profile`).
       then(res => setProfile(res.data)).
       catch(error => console.log(error))
 
-    axios.get('http://localhost:5000/following').
+    axios.get(`${API_BASE}/following`).
       then(res => {
         setFollowing(res.data)
       }

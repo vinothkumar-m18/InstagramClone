@@ -1,6 +1,7 @@
 import {useState, usestate} from 'react';
 import './CreatePostModal.css';
 function CreatePostModal({onClose, onCreated}){
+    const API_BASE = "https://instagramclone-0kzj.onrender.com";
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState("");
     const [caption, setCaption] = useState("");
@@ -21,7 +22,7 @@ function CreatePostModal({onClose, onCreated}){
         form.append('caption', caption);
 
         try{
-            const response = await fetch('http://localhost:5000/api/posts', {
+            const response = await fetch(`${API_BASE}/api/posts`, {
                 method:'POST',
                 credentials:'include',
                 body:form,
