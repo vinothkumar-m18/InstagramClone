@@ -16,14 +16,7 @@ app.use((req, res, next)=>{
     res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
     next();
 })
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://vinothkumar-m18.github.io'
-  ],
-  credentials: true   
-}));
-
+app.use(cors());
 app.use(express.json());
 app.use(logger);
 
