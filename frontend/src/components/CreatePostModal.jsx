@@ -1,7 +1,7 @@
 import {useState, usestate} from 'react';
 import './CreatePostModal.css';
 function CreatePostModal({onClose, onCreated}){
-    const API_BASE = "https://instagramclone-0kzj.onrender.com";
+    const API_BASE = "https://instagramclone-1-c4ge.onrender.com";
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState("");
     const [caption, setCaption] = useState("");
