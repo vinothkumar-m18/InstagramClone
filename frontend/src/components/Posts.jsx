@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, useRef} from "react";
 import CommentModal from './CommentModal.jsx';
 function Posts() {
-    const API_BASE = "https://instagramclone-0kzj.onrender.com";
+    const API_BASE = "https://instagramclone-1-c4ge.onrender.com";
     const [posts, setPosts] = useState([]);
     const [modalPost, setModalPost] = useState(null);
     const commentInputRefs = useRef({});
